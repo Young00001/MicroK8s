@@ -78,3 +78,12 @@ microk8s join 192.168.1.230:25000/92b2db237428470dc4fcfc4ebbd9dc81/2c0cb3284b05
 microk8s join 10.23.209.1:25000/92b2db237428470dc4fcfc4ebbd9dc81/2c0cb3284b05
 microk8s join 172.17.0.1:25000/92b2db237428470dc4fcfc4ebbd9dc81/2c0cb3284b05
 ```
+
+<br>
+
+Afterwards, we will run the following command to ensure that our **Worker Node** is now in our cluster:
+```bash
+sudo microk8s kubectl get nodes
+or
+sudo microk8s kubectl get no
+```
