@@ -44,15 +44,37 @@ microk8s dashboard-proxy
 ```
 ***
 ## 6. Add a Worker Node
-Ensure that the hostname of the joining `worker node` is correctly associated with its IP address in your network's DNS or hosts file:
+Ensure that the hostname of the joining **Worker Node** is correctly associated with its IP address in your network's DNS or hosts file:
 ```bash
 sudo nano /etc/hosts
 ```
-Add your `Worker` and `Control Plane` Nodes to the File:
+Add your **Worker** and **Control Plane** Nodes to the File:
 ```bash
 IP Address      Hostname            Description
 ------------------------------------------------------
 127.0.0.1       localhost           Loopback Address
 192.168.x.x     microk8s-master     Control Plane Node
 192.168.x.x     microk8s-worker     Worker Node
+```
+
+<br>
+
+Now, we can start the process of joining our worker node to the microk8s cluster:
+```bash
+sudo microk8s add-node
+```
+
+This will return some joining instructions which should be executed on the MicroK8s instance that you wish to join to the cluster **(NOT THE NODE YOU RAN add-node FROM)**
+
+```bash
+From the node you wish to join to this cluster, run the following:
+microk8s join 192.168.1.230:25000/92b2db237428470dc4fcfc4ebbd9dc81/2c0cb3284b05
+
+Use the '--worker' flag to join a node as a worker not running the control plane, eg:
+microk8s join 192.168.1.230:25000/92b2db237428470dc4fcfc4ebbd9dc81/2c0cb3284b05 --worker
+
+If the node you are adding is not reachable through the default interface you can use one of the following:
+microk8s join 192.168.1.230:25000/92b2db237428470dc4fcfc4ebbd9dc81/2c0cb3284b05
+microk8s join 10.23.209.1:25000/92b2db237428470dc4fcfc4ebbd9dc81/2c0cb3284b05
+microk8s join 172.17.0.1:25000/92b2db237428470dc4fcfc4ebbd9dc81/2c0cb3284b05
 ```
