@@ -1,8 +1,8 @@
 # MicroK8s: The Kubernetes Solution for Linux
 
 ## Table of Contents:
-**1. Installation**<br>
-**2. Status Check**<br>
+**[1. Installation](https://github.com/Young00001/MicroK8s/blob/main/README.md#1-installation)**<br>
+**[2. Status Check](https://github.com/Young00001/MicroK8s/blob/main/README.md#1-status-check)**<br>
 **3. Turn on Services**<br>
 **4. Start using Kubernetes**<br>
 **5. Access Kubernetes Dashboard**
