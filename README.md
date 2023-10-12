@@ -44,7 +44,15 @@ microk8s dashboard-proxy
 ```
 ***
 ## 6. Add a Worker Node
-Ensure that the hostname of the joining **worker node** is correctly associated with its IP address in your network's DNS or hosts file:
+Ensure that the hostname of the joining `worker node` is correctly associated with its IP address in your network's DNS or hosts file:
 ```bash
 sudo nano /etc/hosts
+```
+Add your `Worker` and `Control Plane` Nodes to the File:
+```bash
+IP Address      Hostname            Description
+------------------------------------------------------
+127.0.0.1       localhost           Loopback Address
+192.168.x.x     microk8s-master     Control Plane Node
+192.168.x.x     microk8s-worker     Worker Node
 ```
