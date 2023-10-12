@@ -2,10 +2,10 @@
 
 ## Table of Contents:
 **[1. Installation](https://github.com/Young00001/MicroK8s/blob/main/README.md#1-installation)**<br>
-**[2. Status Check](https://github.com/Young00001/MicroK8s/blob/main/README.md#1-status-check)**<br>
-**3. Turn on Services**<br>
-**4. Start using Kubernetes**<br>
-**5. Access Kubernetes Dashboard**
+**[2. Status Check](https://github.com/Young00001/MicroK8s/blob/main/README.md#2-check-the-status-while-kubernetes-initializes)**<br>
+**[3. Turn on Services](https://github.com/Young00001/MicroK8s/blob/main/README.md#3-turn-on-the-services-you-want)**<br>
+**[4. Start using Kubernetes]()**<br>
+**[5. Access Kubernetes Dashboard]()**
 ***
 ## 1. Installation
 Install MicroK8s on Linux
