@@ -5,7 +5,7 @@
 **[2. Status Check](https://github.com/Young00001/MicroK8s/blob/main/README.md#2-check-the-status-while-kubernetes-initializes)**<br>
 **[3. Turn on Services](https://github.com/Young00001/MicroK8s/blob/main/README.md#3-turn-on-the-services-you-want)**<br>
 **[4. Start using Kubernetes](https://github.com/Young00001/MicroK8s/blob/main/README.md#4-start-using-kubernetes)**<br>
-**[5. Access Kubernetes Dashboard](https://github.com/Young00001/MicroK8s/tree/main#5-access-the-kubernetes-dashboard)**<br>
+**[5. Access Kubernetes Dashboard](https://github.com/Young00001/MicroK8s/blob/main/README.md#5-access-the-kubernetes-dashboard)**<br>
 **[6. Add a Worker Node](https://github.com/Young00001/MicroK8s#6-add-a-worker-node)**<br>
 **[7. Pod Deployment]()**
 ***
