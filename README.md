@@ -7,7 +7,7 @@
 **[4. Start using Kubernetes](https://github.com/Young00001/MicroK8s/blob/main/README.md#4-start-using-kubernetes)**<br>
 **[5. Access Kubernetes Dashboard](https://github.com/Young00001/MicroK8s/blob/main/README.md#5-access-the-kubernetes-dashboard)**<br>
 **[6. Add a Worker Node](https://github.com/Young00001/MicroK8s/blob/main/README.md#6-add-a-worker-node)**<br>
-**[7. Pod Deployment]()**
+**[7. Pod Deployment](https://github.com/Young00001/MicroK8s/blob/main/README.md#7-pod-deployment)**
 ***
 ## 1. Installation
 Install MicroK8s on Linux
