@@ -95,7 +95,7 @@ This is a simple example of a pod deployment using a docker container
 
 <br>
 
-_(OPTIONAL)_
+**_(OPTIONAL)_**  
 In order to keep a clean workspace you can do the following:
 ```bash
 mkdir ~/Deployment && cd ~/Deployment
@@ -105,7 +105,7 @@ mkdir ~/Deployment && cd ~/Deployment
 
 Next, we can create a manifest file using a `.yaml` extension
 ```bash
-nano pod.yaml
+nano pod_name.yaml
 ```
 Here is an example manifest file that you can use and modify with your own configurations:
 ```bash
@@ -133,7 +133,7 @@ spec:
 
 Now that we have our manifest file we can deploy our new pod using our **Master Node**:
 ```bash
-sudo microk8s kubectl apply -f pod.yaml
+sudo microk8s kubectl apply -f pod_name.yaml
 ```
 To view your pod use the following command:
 ```bash
