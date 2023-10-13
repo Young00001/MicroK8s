@@ -18,29 +18,29 @@ Don't have the `snap` command? [Get snap Here](https://snapcraft.io/docs/install
 ***
 ## 2. Check the Status while Kubernetes Initializes
 ```bash
-microk8s status --wait-ready
+sudo microk8s status --wait-ready
 ```
 
 ***
 ## 3. Turn on the Services you want
 ```bash
-microk8s enable dashboard
-microk8s enable dns
-microk8s enable registry
-microk8s enable istio
+sudo microk8s enable dashboard
+sudo microk8s enable dns
+sudo microk8s enable registry
+sudo microk8s enable istio
 ```
 _Try `microk8s enable --help` for a list of available services and optional features. `microk8s disable <name>` turns off a service._
 
 ***
 ## 4. Start using Kubernetes
 ```bash
-microk8s kubectl get all --all-namespaces
+sudo microk8s kubectl get all --all-namespaces
 ```
 
 ***
 ## 5. Access the Kubernetes Dashboard
 ```bash
-microk8s dashboard-proxy
+sudo microk8s dashboard-proxy
 ```
 ***
 ## 6. Add a Worker Node
@@ -86,4 +86,58 @@ Afterwards, we will run the following command to ensure that our **Worker Node**
 sudo microk8s kubectl get nodes
 or
 sudo microk8s kubectl get no
+```
+
+***
+## Pod Deployment
+This is a simple example of a pod deployment using a docker container
+
+<br>
+_(OPTIONAL)_
+In order to keep a clean workspace you can do the following:
+```bash
+mkdir ~/Deployment && cd ~/Deployment
+```
+
+<br>
+
+Next, we can create a manifest file using a `.yaml` extension
+```bash
+nano pod.yaml
+```
+Here is an example manifest file that you can use and modify with your own configurations:
+```bash
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pod-name
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pod-name
+  template:
+    metadata:
+      labels:
+        app: pod-name
+    spec:
+      containers:
+      - name: pod
+        image: image_name:tag
+        command: ["tail", "-f", "/dev/null"]
+```
+
+<br>
+
+Now that we have our manifest file we can deploy our new pod using our **Master Node**:
+```bash
+sudo microk8s kubectl apply -f pod.yaml
+```
+To view your pod use the following command:
+```bash
+sudo microk8s kubectl get pods
+```
+For a more informative display of your pod use:
+```bash
+sudo microk8s kubectl describe pod pod_name
 ```
