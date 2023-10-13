@@ -6,7 +6,8 @@
 **[3. Turn on Services](https://github.com/Young00001/MicroK8s/blob/main/README.md#3-turn-on-the-services-you-want)**<br>
 **[4. Start using Kubernetes](https://github.com/Young00001/MicroK8s/tree/main#4-start-using-kubernetes)**<br>
 **[5. Access Kubernetes Dashboard](https://github.com/Young00001/MicroK8s/tree/main#5-access-the-kubernetes-dashboard)**<br>
-**[6. Add a Worker Node](https://github.com/Young00001/MicroK8s#6-add-a-worker-node)**
+**[6. Add a Worker Node](https://github.com/Young00001/MicroK8s#6-add-a-worker-node)**<br>
+**[7. Pod Deployment]()**
 ***
 ## 1. Installation
 Install MicroK8s on Linux
@@ -89,10 +90,11 @@ sudo microk8s kubectl get no
 ```
 
 ***
-## Pod Deployment
+## 7. Pod Deployment
 This is a simple example of a pod deployment using a docker container
 
 <br>
+
 _(OPTIONAL)_
 In order to keep a clean workspace you can do the following:
 ```bash
@@ -137,7 +139,7 @@ To view your pod use the following command:
 ```bash
 sudo microk8s kubectl get pods
 ```
-For a more informative display of your pod use:
+For a more desciptive view of your pod use:
 ```bash
 sudo microk8s kubectl describe pod pod_name
 ```
