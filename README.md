@@ -30,7 +30,9 @@ sudo microk8s enable dns
 sudo microk8s enable registry
 sudo microk8s enable istio
 ```
-_Try `microk8s enable --help` for a list of available services and optional features. `microk8s disable <name>` turns off a service._
+Try `microk8s enable --help` for a list of available services and optional features.<br> 
+
+`microk8s disable <name>` turns off a service.
 
 ***
 ## 4. Start using Kubernetes
