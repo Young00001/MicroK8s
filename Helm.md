@@ -22,3 +22,17 @@ After the package is downloaded, Unpack it
 ```bash
 tar -zxvf helm-v3.0.0-linux-amd64.tar.gz
 ```
+
+<br>
+
+Find the helm binary in the unpacked directory, and move it to its desired destination 
+```bash
+mv linux-amd64/helm /usr/local/bin/helm
+```
+
+From there, you should be able to run the client and add the stable repo
+```bash
+helm help
+```
+
+***
