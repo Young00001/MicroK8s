@@ -5,7 +5,7 @@ Don't know what Helm is? Click [Here](https://helm.sh/docs/topics/architecture/#
 ***
 ## Table of Contents
 **1. Installing Helm**<br>
-**2.**<br>
+**2. Deploying a Mern Stack as a Helm Chart**<br>
 
 ***
 ## Installing Helm
@@ -38,7 +38,9 @@ helm help
 ***
 
 ## Installing From Script
-Helm now has an installer sHelm now has an installer script that will automatically grab the latest version of Helm and install it locally.
+Helm now has an installer script that will automatically grab the latest version of Helm and install it locally.
+
+<br>
 
 You can fetch that script, and then execute it locally. It's well documented so that you can read through it and understand what it is doing before you run it.cript that will automatically grab the latest version of Helm and install it locally.
 ```bash
@@ -48,4 +50,10 @@ chmod 700 get_helm.sh
 ```
 Yes, you can `curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash` if your feeling spicy.
 
+<br>
+
+If you would like to install via a native package manager Click [Here](https://helm.sh/docs/intro/install/#through-package-managers) for a guide
+
 ***
+## Deploying a Mern Stack as a Helm Chart
+Not sure what MERN Stack is? No worries, Click [Here](https://www.simplilearn.com/tutorials/mongodb-tutorial/what-is-mern-stack-introduction-and-examples)
