@@ -20,7 +20,7 @@ First, Download your desired Binary Release by Clicking [Here](https://github.co
 
 After the package is downloaded, Unpack it 
 ```bash
-tar -zxvf helm-v3.0.0-linux-amd64.tar.gz
+tar -zxvf helm-<version>-<arch>.tar.gz
 ```
 
 <br>
