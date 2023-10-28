@@ -1,4 +1,4 @@
-## Integrating HELM Into Microk8s
+## Integrating HELM Service Into a Microk8s Cluster
 
 Don't know what Helm is? Click [Here](https://helm.sh/docs/topics/architecture/#the-purpose-of-helm)!
 
@@ -8,7 +8,7 @@ Don't know what Helm is? Click [Here](https://helm.sh/docs/topics/architecture/#
 **2. Deploying a Mern Stack as a Helm Chart**<br>
 
 ***
-## Enableling Helm on your Microk8s Cluster
+## Enabling Helm
 In order to enable the Helm Service you can type the following command:
 ```bash
 sudo microk8s enable helm
