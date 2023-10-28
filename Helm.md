@@ -58,6 +58,16 @@ If you would like to install via a native package manager Click [Here](https://h
 ## Deploying a Mern Stack as a Helm Chart
 Not sure what MERN Stack is? No worries, Click [Here](https://www.simplilearn.com/tutorials/mongodb-tutorial/what-is-mern-stack-introduction-and-examples)
 
+<br>
+
+Ensure that Helm is enabled in your Microk8s Cluster
+```bash
+sudo microk8s enable helm
+```
+
+<br>
+
+
 
 ### Explanation
 ```bash
