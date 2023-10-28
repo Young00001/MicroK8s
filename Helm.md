@@ -83,3 +83,12 @@ microk8s kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=clu
 `--clusterrole=cluster-admin`: Specifies the cluster role to be bound to the service account. In this case, the cluster-admin cluster role grants full administrative access to the cluster.<br>
 
 `--serviceaccount=kube-system:tiller`: Specifies the service account that the cluster role binding is associated with. This binds the tiller service account in the kube-system namespace to the cluster-admin role, effectively granting Tiller administrative access to the cluster.
+
+<br>
+
+```bash
+microk8s helm init --service-account tiller
+```
+`microk8s helm init`: Initializes Helm within the MicroK8s cluster.<br>
+
+`--service-account tiller`: Specifies the service account to be used by Tiller. In this case, it sets Tiller to use the tiller service account you created earlier.
