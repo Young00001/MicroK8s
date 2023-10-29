@@ -10,7 +10,7 @@
 
 ***
 ## MongoDB Service Deployment
-_MongoDB uses port 27017 by default, to ensure that the port is free you can use the following command:_
+MongoDB uses port 27017 by default, to ensure that the port is free you can use the following command:
 ```bash
 netstat -tuln | grep 27017
 ```
@@ -39,3 +39,62 @@ spec:
       targetPort: 27017
 ```
 Click [Here](https://www.yamllint.com/) for a **.yaml validator** to ensure you have the correct formatting.
+
+<br>
+
+Afterwards, we can now deploy our manifest file:
+```bash
+sudo microk8s kubectl apply -f mongodb-svc.yaml
+```
+
+<br>
+
+Check to see if the service is running:
+```bash
+sudo microk8s kubectl get svc
+```
+
+***
+## MongoDB Pod Deployment
+To deploy our StatefulSet MongoDB Pods we will start my ensuring we are in our `~/Deployment/MongoDB` directory and we will also create our manifest file labeled `mongodb-statefulset.yaml`
+```bash
+cd ~/Deployment/MongoDB && gedit mongodb-statefulset.yaml
+```
+
+### Contents of `mongodb-statefulset.yaml` file
+```yaml
+apiVersion: v1
+kind: StatefulSet
+metadata:
+  name: mongodb
+spec:
+  serviceName: mongodb
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongodb
+  template:
+    metadata:
+      labels:
+        app: mongodb
+        selector: mongodb
+    spec:
+      containers:
+        - name: mongodb
+          image:
+          ports:
+            - containerPort: 27017
+          volumeMounts:
+            - name: pvc
+              mountPath: data/db
+  volumeClaimTeplates:
+    - metadata:
+        name: pvc
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi
+
+```
