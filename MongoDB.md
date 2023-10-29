@@ -63,7 +63,7 @@ cd ~/Deployment/MongoDB && gedit mongodb-statefulset.yaml
 
 ### Contents of `mongodb-statefulset.yaml` file
 ```yaml
-apiVersion: v1
+apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: mongodb
@@ -81,13 +81,13 @@ spec:
     spec:
       containers:
         - name: mongodb
-          image:
+          image: mongodb:latest
           ports:
             - containerPort: 27017
           volumeMounts:
             - name: pvc
               mountPath: data/db
-  volumeClaimTeplates:
+  volumeClaimTemplates:
     - metadata:
         name: pvc
       spec:
@@ -96,5 +96,4 @@ spec:
         resources:
           requests:
             storage: 1Gi
-
 ```
