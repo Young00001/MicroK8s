@@ -32,3 +32,4 @@ spec:
     - port: 27017
       targetPort: 27017
 ```
+Click [Here](https://www.yamllint.com/) for a **.yaml validator** to ensure you have the correct formatting.
