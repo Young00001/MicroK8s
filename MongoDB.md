@@ -10,10 +10,16 @@
 
 ***
 ## MongoDB Service Deployment
+_MongoDB uses port 27017 by default, to ensure that the port is free you can use the following command:_
+```bash
+netstat -tuln | grep 27017
+```
+
+<br>
+
 To start a MongoDB Service Deployment, we will first create a working deployment directory and add a `.yaml` file:
 ```bash
-mkdir -p ~/Deployment/MongoDB && cd ~/Deployment/MongoDB
-gedit mongodb-svc.yaml
+mkdir -p ~/Deployment/MongoDB && cd ~/Deployment/MongoDB && gedit mongodb-svc.yaml
 ```
 
 ### Contents of `mongodb-svc.yaml` file
