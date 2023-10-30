@@ -81,12 +81,12 @@ spec:
     spec:
       containers:
         - name: mongodb
-          image: mongodb:latest
+          image: mongo:latest
           ports:
             - containerPort: 27017
           volumeMounts:
             - name: pvc
-              mountPath: data/db
+              mountPath: /data/db
   volumeClaimTemplates:
     - metadata:
         name: pvc
