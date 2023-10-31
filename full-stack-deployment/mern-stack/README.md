@@ -16,7 +16,8 @@ _If you need a guide on how to set-up a Microk8s Cluster you can follow my guide
 
 ***
 ## Microk8s Addons
-The following Addons are recommended for this stack deployment:
+The following Addons are recommended for this stack deployment<br>
+Enable the following addons from the Control-Plane Node:
 ```bash
 sudo microk8s enable dns dashboard storage ingress
 ```
