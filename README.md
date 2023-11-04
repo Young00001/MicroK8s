@@ -128,7 +128,7 @@ spec:
     spec:
       containers:
       - name: pod
-        image: image_name:tag
+        image: ubuntu:latest
         command: ["tail", "-f", "/dev/null"]
 ```
 
